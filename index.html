@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caquetá - Corazón de la Amazonía Colombiana</title>
+    <meta name="description" content="Descubre el Caquetá, corazón de la Amazonía colombiana. Turismo de naturaleza, cultura amazónica y experiencias auténticas.">
+    <link rel="stylesheet" href="css/Untitled-1.css">
+    <link rel="stylesheet" href="css/dinamico.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- MENSAJE DINÁMICO (DOM - hora + idioma) -->
+    <div id="mensaje-bienvenida" role="status" aria-live="polite">
+        Cargando mensaje de bienvenida...
+    </div>
+
+    <!-- HEADER CON MENÚ DESPLEGABLE -->
+    <header>
+        <img src="svg/dibujo.svg" alt="Logo Caquetá Corazón de la Amazonía" width="80" height="80">
+
+        <button class="menu-toggle" id="menu-toggle" aria-controls="nav-menu"
+                aria-expanded="false" aria-label="Abrir menú de navegación">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+
+        <nav id="nav-menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+
+                <!-- SUBMENÚ DESPLEGABLE: Destinos -->
+                <li class="has-submenu">
+                    <a href="#" aria-haspopup="true">Destinos</a>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a href="https://elturismoencolombia.com/a-donde-ir/florencia-caqueta-travel/" target="_blank" rel="noopener">Cómo llegar</a></li>
+                        <li><a href="https://www.tripadvisor.co/Attractions-g1459889-Activities-Florencia_Caqueta_Department.html" target="_blank" rel="noopener">Actividades</a></li>
+                        <li><a href="https://www.estaderobellohorizonte.com/" target="_blank" rel="noopener">Hospedaje</a></li>
+                    </ul>
+                </li>
+
+                <!-- SUBMENÚ DESPLEGABLE: Cultura -->
+                <li class="has-submenu">
+                    <a href="#" aria-haspopup="true">Cultura</a>
+                    <ul class="submenu" aria-hidden="true">
+                        <li><a href="https://www.youtube.com/watch?v=8PBnqt0FaN8" target="_blank" rel="noopener">Videos culturales</a></li>
+                        <li><a href="https://visionamazonia.minambiente.gov.co/" target="_blank" rel="noopener">Guardianes del bosque</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="https://www.asocatur.com/" target="_blank" rel="noopener">Viajes responsables</a></li>
+            </ul>
+        </nav>
+
+        <div class="idioma">
+            <label for="selector-idioma">🌐</label>
+            <select id="selector-idioma" aria-label="Seleccionar idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-label="Bienvenida">
+            <h2>Bienvenido al Corazón Verde de Colombia</h2>
+            <p>Sumérgete en la biodiversidad, cultura y tradiciones del Caquetá. Una experiencia transformadora te espera.</p>
+            <a href="#slider-section" class="btn">Descubre experiencias únicas</a>
+        </section>
+
+        <!-- SLIDER DE IMÁGENES -->
+        <section id="slider-section" aria-labelledby="slider-title">
+            <div class="section-title">
+                <h2 id="slider-title">Galería Caquetá</h2>
+            </div>
+            <div id="slider" role="region" aria-label="Galería de imágenes de Caquetá">
+                <button id="slider-prev" class="slider-btn" aria-label="Imagen anterior">&#8592;</button>
+                <button id="slider-next" class="slider-btn" aria-label="Siguiente imagen">&#8594;</button>
+
+                <div class="slide" role="img" aria-label="Ríos amazónicos">
+                    <img src="imagenes/hidrografia.webp" alt="Ríos amazónicos del Caquetá" width="1200" height="420">
+                    <div class="slide-caption">
+                        <h3>Ríos amazónicos</h3>
+                        <p>Las arterias de vida del Caquetá, hogar de delfines rosados y biodiversidad única.</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="img" aria-label="Aves multicolores">
+                    <img src="imagenes/aves.jpg" alt="Aves multicolores de la región amazónica" width="1200" height="420" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Aves de la región</h3>
+                        <p>Más de 800 especies de aves convierten al Caquetá en paraíso del aviturismo.</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="img" aria-label="Cultura ancestral">
+                    <img src="imagenes/ancestral.jpeg" alt="Arte y cultura ancestral indígena del Caquetá" width="1200" height="420" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Legado ancestral</h3>
+                        <p>Pueblos Coreguaje, Murui, Andoque y Uitoto, guardianes de saberes milenarios.</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="img" aria-label="Turismo Caquetá">
+                    <img src="imagenes/turismo caqueta.jpg" alt="Paisaje turístico del Caquetá" width="1200" height="420" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Paraíso caqueteño</h3>
+                        <p>Vive experiencias únicas en contacto con la naturaleza amazónica.</p>
+                    </div>
+                </div>
+
+                <div class="slide" role="img" aria-label="Aventura en la selva">
+                    <img src="imagenes/aventura.jpg" alt="Aventura consciente en la selva amazónica" width="1200" height="420" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Aventura consciente</h3>
+                        <p>Ecoturismo responsable que contribuye a la conservación y las comunidades locales.</p>
+                    </div>
+                </div>
+
+                <div id="slider-dots" role="tablist" aria-label="Navegación del slider"></div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIAS -->
+        <section id="experiencias" aria-labelledby="intro-title">
+            <div class="section-title">
+                <h2 id="intro-title">Una experiencia auténtica en la Amazonía</h2>
+            </div>
+            <div class="card-container">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="imagenes/turismo caqueta.jpg" alt="Biodiversidad del Caquetá">
+                    </div>
+                    <div class="card-content">
+                        <h3>Biodiversidad única</h3>
+                        <p>Descubre una de las regiones con mayor biodiversidad del planeta, hogar de jaguares, delfines rosados y cientos de especies de aves.</p>
+                        <a href="https://elturismoencolombia.com/a-donde-ir/florencia-caqueta-travel/" class="card-link" target="_blank" rel="noopener">Conoce más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="imagenes/cultura viva.webp" alt="Cultura viva indígena del Caquetá">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cultura viva</h3>
+                        <p>Conoce las tradiciones de los pueblos Coreguaje, Murui, Andoque y Uitoto, guardianes de saberes ancestrales sobre la selva.</p>
+                        <a href="https://www.youtube.com/watch?v=8PBnqt0FaN8" class="card-link" target="_blank" rel="noopener">Conoce más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="imagenes/aventura.jpg" alt="Aventura en la selva amazónica">
+                    </div>
+                    <div class="card-content">
+                        <h3>Aventura consciente</h3>
+                        <p>Vive experiencias únicas mientras contribuyes a la conservación y al desarrollo sostenible de las comunidades locales.</p>
+                        <a href="https://www.asocatur.com/" class="card-link" target="_blank" rel="noopener">Conoce más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section aria-labelledby="blog-title">
+            <div class="section-title">
+                <h2 id="blog-title">Relatos de la selva</h2>
+            </div>
+            <article class="blog-post">
+                <h3>Un encuentro con los guardianes de la selva</h3>
+                <p>Mi experiencia acompañando a la comunidad Murui en sus prácticas tradicionales me enseñó el verdadero significado de vivir en armonía con la naturaleza...</p>
+                <a href="https://visionamazonia.minambiente.gov.co/" class="card-link" target="_blank" rel="noopener">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+            <article class="blog-post">
+                <h3>Navegando el río: Encuentro con delfines rosados</h3>
+                <p>El momento en que vimos los primeros delfines rosados saltando junto a nuestra canoa fue simplemente mágico. Así es un día en los ríos del Caquetá...</p>
+                <a href="https://masviajemasvida.com/destinos/colombia/region-amazonica/florencia-caqueta-viajar-al-corazon-vivo-de-la-amazonia-colombiana/" class="card-link" target="_blank" rel="noopener">Leer más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Caquetá Corazón de la Amazonía</h3>
+                <p>Descubre la magia de la selva colombiana y vive experiencias transformadoras en contacto con la naturaleza y las culturas ancestrales.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="https://elturismoencolombia.com/a-donde-ir/florencia-caqueta-travel/" target="_blank" rel="noopener">Cómo llegar</a></li>
+                    <li><a href="https://www.estaderobellohorizonte.com/" target="_blank" rel="noopener">Hospedaje</a></li>
+                    <li><a href="https://www.tripadvisor.co/Attractions-g1459889-Activities-Florencia_Caqueta_Department.html" target="_blank" rel="noopener">Actividades</a></li>
+                    <li><a href="https://www.asocatur.com/" target="_blank" rel="noopener">Viajes responsables</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Florencia, Caquetá, Colombia</li>
+                    <li><i class="fas fa-phone" aria-hidden="true"></i> +57 (8) 435 6789</li>
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> info@caquetaturismo.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Boletín informativo</h3>
+                <p>Recibe noticias y ofertas especiales</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico para boletín">
+                    <button type="button">Suscribirme</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Caquetá Corazón de la Amazonía. Todos los derechos reservados.</p>
+            <p>Desarrollado como proyecto educativo - UNAD | Programación Web 213025</p>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript externo -->
+    <script src="js/Untitled-1.js"></script>
+</body>
+</html>
